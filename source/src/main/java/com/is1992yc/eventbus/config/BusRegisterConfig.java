@@ -18,7 +18,7 @@ public class BusRegisterConfig {
 
     @PostConstruct
     public void init(){
-        myEventBus.registerAnsy(eatEventListener);
+        myEventBus.registerAsync(eatEventListener);
     }
 
 }

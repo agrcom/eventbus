@@ -9,7 +9,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 /**
- * event的基础类
  * @author is1992yc
  */
 @Data
@@ -24,16 +23,12 @@ public abstract class BaseEvent implements Serializable {
 
     private long leadTime = 0L;
 
-    /**
-     * 描述
-     * @return String
-     */
     public abstract String getDescription();
 
 
     public void postAsnyc(MyEventBus bus) {
         Optional.ofNullable(bus).ifPresent(b -> {
-            b.postAnsy(this);
+            b.postAsync(this);
         });
     }
 

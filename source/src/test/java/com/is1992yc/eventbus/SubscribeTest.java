@@ -20,17 +20,14 @@ public class SubscribeTest {
 
     @Test
     public void test(){
-
-
         User user = new User();
+        user.setName("John");
 
-        user.setName("张三");
 
-
-        myEventBus.postAnsy(new EatEvent(user,"菠萝蜜"));
-        myEventBus.postAnsy(new EatEvent(user,"粑粑柑"));
-        myEventBus.postAnsy(new EatEvent(user,"哈密瓜"));
-        myEventBus.postAnsy(new EatEvent(user,"苹果"));
+        myEventBus.postAsync(new EatEvent(user,"soup"));
+        myEventBus.postAsync(new EatEvent(user,"pad thai"));
+        myEventBus.postAsync(new EatEvent(user,"burger"));
+        myEventBus.postAsync(new EatEvent(user,"pizza"));
 
 
         try {

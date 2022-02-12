@@ -15,10 +15,7 @@ public class EatEventListener {
     @Subscribe
     @AllowConcurrentEvents
     private void function(EatEvent event){
-        /**
-         * 在这里可以处理一些对应的业务
-         */
-        System.out.println(String.format("%s eat %s",event.getUser().getName(),event.getFood()));
+        System.out.printf("%s: %s eat %s%n",Thread.currentThread().getName() ,event.getUser().getName(),event.getFood());
     }
 
 }

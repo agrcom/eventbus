@@ -8,8 +8,6 @@ import org.springframework.context.annotation.Configuration;
 
 
 /**
- * 系统配置
- * bean的初始化
  * @author is1992yc
  */
 @Configuration

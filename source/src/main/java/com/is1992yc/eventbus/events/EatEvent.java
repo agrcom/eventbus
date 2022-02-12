@@ -10,10 +10,7 @@ import lombok.EqualsAndHashCode;
  */
 public class EatEvent extends BaseEvent {
 
-
-
     private User user;
-
     private String food;
 
 
